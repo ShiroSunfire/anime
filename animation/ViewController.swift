@@ -10,16 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var myView:CustomView!
+    
+    @IBAction func pressed(_ sender: Any) {
+      myView.flip()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        myView = CustomView(frame: CGRect(x: view.frame.midX - 50.0, y: view.frame.midY - 50.0, width: 100.0, height: 100.0))
+        view.addSubview(myView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
